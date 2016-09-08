@@ -45,4 +45,4 @@ GLUtil            -   GLES utility classes from previous projects:
 
 [6] J DiMarzio "Android Studio Game Development: Concepts and Design" (2015, Apress)
 
-*especially interesting books.
+*especially interesting books
