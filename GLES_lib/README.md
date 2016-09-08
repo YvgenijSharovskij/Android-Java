@@ -11,8 +11,8 @@
 Contains java classes which can be readily reused in multiple projects.
 
 # INDEX:
-GLSurfaceView     -   basic GlSurfaceView
-GLDefiningShapes  -   drawing an object
+GLSurfaceView     -   basic GlSurfaceView #
+GLDefiningShapes  -   drawing an object #
 GLProjectionNCam  -   setting up a view matrix
 GLRotation        -   rotating an object by multiplying a transformation matrix with the view matrix
 GLOnTouch         -   motion event responses
