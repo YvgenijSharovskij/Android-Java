@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appName "Dilution Calculator">
+    <!ENTITY appVersion "v1.0">
+    <!ENTITY appAuthor "Yvgenij Sharovskij">
+]>
+
+<resources>
+    <string name="app_name">&appName;</string>
+    <string name="app_version">&appVersion;</string>
+    <string name="app_author">&appAuthor;</string>
+    <!-- MainActivity -->
+    <string name="V_1">Initial volume: </string>
+    <string name="V_1_input_hint">Enter the volume ...</string>
+    <string name="V_2">Final volume: </string>
+    <string name="V_2_input_hint">Enter the volume ...</string>
+    <string name="C_1">Initial conc.: </string>
+    <string name="C_1_input_hint">Enter the conc. ...</string>
+    <string name="C_2">Final conc.: </string>
+    <string name="C_2_input_hint">Enter the conc. ...</string>
+    <string name="calcButton_text">Calculate</string>
+    <string name="resetButton_text">Reset</string>
+    <string name="ans_text">Answer: </string>
+    <string name="ans_var">ans_var: </string>
+    <string name="ans_output">Ans_output</string>
+    <string name="unit_conc">M</string>
+    <string name="unit_vol">L</string>
+    <string name="menu_about">About</string>
+    <string name="menu_about_msg">&appName; &appVersion; is a simple app written by &appAuthor;. \n\n
+        Enter any 3 variables from the C1 \u00D7 V1 = C2 \u00D7 V2 equation,
+        where C1 is the initial concentration, C2 the final concentration, V1 the initial volume,
+        and V2 the final volume using the standard SI units. The remaining variable will be given as
+        the answer.</string>
+
+
+</resources>
