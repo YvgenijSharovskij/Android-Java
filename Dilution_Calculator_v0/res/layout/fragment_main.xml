@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="16dp"
-        android:padding="8dp">
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/V_1"
@@ -235,7 +235,8 @@
             android:paddingLeft="8dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:freezesText="true"/>
 
         <TextView
             android:id="@+id/ans_units"
@@ -262,13 +263,13 @@
 
         <Button
             android:id="@+id/buttonReset"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/Widget.AppCompat.Button"
+            android:background="@drawable/button_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_gravity="start"
             android:layout_marginTop="16dp"
-            android:background="@color/buttonBg"
             android:paddingEnd="16dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
@@ -278,13 +279,13 @@
 
         <Button
             android:id="@+id/buttonCalculate"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/Widget.AppCompat.Button"
+            android:background="@drawable/button_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_gravity="start"
             android:layout_marginTop="16dp"
-            android:background="@color/buttonBg"
             android:paddingEnd="16dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"

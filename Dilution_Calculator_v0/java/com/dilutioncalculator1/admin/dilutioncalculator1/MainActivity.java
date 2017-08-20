@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class MainActivity extends SingleFragmentActivity {
+import java.util.UUID;
 
-    public static final String EXTRA_QNA_ID ="MainActivity";
+public class MainActivity extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-        return new MainFragment();
+         return new MainFragment();
     }
 }
 

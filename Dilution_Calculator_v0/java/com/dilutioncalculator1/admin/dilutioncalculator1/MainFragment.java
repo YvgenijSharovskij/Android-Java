@@ -18,7 +18,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.UUID;
 
 
 /**
@@ -29,18 +33,18 @@ public class MainFragment extends Fragment { // Fragment from support lib
 
     private static final String TAG = "MainFragment";
 
-    Button mCalculateButton;
-    Button mResetButton;
-    EditText mInputC1;
-    EditText mInputC2;
-    EditText mInputV1;
-    EditText mInputV2;
-    EditText[] mInputEdits = {mInputC1, mInputC2, mInputV1, mInputV2};
-    TextView mOutputVar;
-    TextView mOutputAnswer;
-    TextView mOutputUnits;
-    String mOutputString = null;
-    Float mOutputFloat = 0.0f;
+    // private Button mCalculateButton;
+    // private Button mResetButton;
+    private EditText mInputC1;
+    private EditText mInputC2;
+    private EditText mInputV1;
+    private EditText mInputV2;
+    private EditText[] mInputEdits = {mInputC1, mInputC2, mInputV1, mInputV2};
+    private TextView mOutputVar;
+    private TextView mOutputAnswer;
+    private TextView mOutputUnits;
+    private String mOutputString = null;
+    private Float mOutputFloat = 0.0f;
 
 
     @Override
@@ -48,7 +52,6 @@ public class MainFragment extends Fragment { // Fragment from support lib
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
-
     }
 
     @Override
@@ -150,7 +153,7 @@ public class MainFragment extends Fragment { // Fragment from support lib
         mOutputAnswer = (TextView) v.findViewById(R.id.ans_output);
         mOutputUnits = (TextView) v.findViewById(R.id.ans_units);
 
-        mCalculateButton = (Button) v.findViewById(R.id.buttonCalculate);
+        Button mCalculateButton = (Button) v.findViewById(R.id.buttonCalculate);
         mCalculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,6 +178,8 @@ public class MainFragment extends Fragment { // Fragment from support lib
                 for(int k = 0; k < inputFloats.length; k++) {
                     if(!TextUtils.isEmpty(inputStrings[k])) {
                         inputFloats[k] = Float.valueOf(inputStrings[k]);
+
+
                     }
                 }
 
@@ -226,6 +231,12 @@ public class MainFragment extends Fragment { // Fragment from support lib
                     // replace all blank spaces, and trim head and tail
                     // mOutputAnswer.setText(mOutputString.replaceAll("\\s+", "").trim());
 
+                    //BigDecimal bd = new BigDecimal(String.valueOf(mOutputString.trim()))
+                            //.setScale(getMinSF(inputFloats), BigDecimal.ROUND_HALF_UP);
+
+                   // BigDecimal bd1 = new BigDecimal(String.valueOf(mOutputString.trim()));
+
+                    //mOutputAnswer.setText(useScientificNotation(useExponentFormat(bd1, getMinSF(inputFloats)).toString()));
                     mOutputAnswer.setText(useScientificNotation(mOutputString.trim()));
 
                     // reset
@@ -234,7 +245,7 @@ public class MainFragment extends Fragment { // Fragment from support lib
             }
         });
 
-        mResetButton = (Button) v.findViewById(R.id.buttonReset);
+        Button mResetButton = (Button) v.findViewById(R.id.buttonReset);
         mResetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -278,11 +289,18 @@ public class MainFragment extends Fragment { // Fragment from support lib
             output += " \u00D7 10^";             // add "x 10^"
             output += input.substring(inputE + 1, input.length()); // set magnitude to SFs
         } else {
-            output = input;
+            return input;   // output = input;
         }
 
         return output;
     }
+
+//    private static String useExponentFormat(BigDecimal bd, int scale) {
+//        NumberFormat formatter = new DecimalFormat("0.0E0");
+//        formatter.setRoundingMode(RoundingMode.HALF_UP);
+//        formatter.setMinimumFractionDigits(scale);
+//        return formatter.format(bd);
+//    }
 
     static boolean isScientificNotation(String input) {
         try {
@@ -296,13 +314,22 @@ public class MainFragment extends Fragment { // Fragment from support lib
     }
 
 //    int getMinSF(float[] inputArray) {
-//        int minSF = Integer.MAX_VALUE;
+//        int minSF = 0;
+//        int[] SFArray = new int[inputArray.length];
 //
 //        for(int i = 0; i < inputArray.length; i++) {
-//            if (inputArray[i] < minSF) {
-//                minSF = Math.round(inputArray[i]);
-//            }
+//
+//            SFArray[i] = getNumberOfDecimals(Float.toString(inputArray[i]));
+//            Log.d(TAG, "SFArray[i] " + SFArray[i]);
+//            Log.d(TAG, "inputArray[i] " + inputArray[i]);
+//
 //        }
+//
+//        Arrays.sort(SFArray);
+//        minSF = SFArray[1];
+//
+//
+//        Log.d(TAG, "minSF " + minSF);
 //        return minSF;
 //    }
 //
