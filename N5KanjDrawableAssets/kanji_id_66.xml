@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- Generator: Adobe Illustrator 22.0 0.1 SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"> <!-- Note: android:name matches the db entries and KanjiFragment.getChildVectorPath(@DrawableRes int resId ImageView imageView String pathName) -->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"> <path android:name="kanji_id_66_radical_0" android:fillColor="@color/kanji_story_radical_default_color" android:pathData="M21.55 21.6a 0.37 0.37 0 0 1 -0.5 0.12 17.71 17.71 0 0 1-8.79-11.38C11.4 16.49 8 20.47 2.14 22.37a 0.32 0.32 0 0 1 -0.39 -0.15c -0.14 -0.19 -0.05 -0.43 0.22 -0.55 5.37-2.25 8.37-6.43 9-12.53H2.28A 0.31 0.31 0 0 1 2 8.93c -0.07 -0.2 0.14 -0.39 0.45 -0.39H11c0 -0.74 0-1.27 0-1.63V2.25a 0.35 0.35 0 0 1 0.4 -0.36c1.4 0.1 2.09 0.29 2.09 0.63s -0.33 0.45-1 0.67V6.86c0 0.36 0 0.91 -0.05 1.68h6.8l1-1.37a 0.38 0.38 0 0 1 0.58 0 14 14 0 0 1 1.25 1.39 0.3 0.3 0 0 1 0 0.36L22 9a 0.36 0.36 0 0 1 -0.28 0.16h-9.1a17.34 17.34 0 0 0 9.46 11 0.42 0.42 0 0 1 0.09 0.72A6 6 0 0 0 21.55 21.6Z" /> </svg> </vector>
